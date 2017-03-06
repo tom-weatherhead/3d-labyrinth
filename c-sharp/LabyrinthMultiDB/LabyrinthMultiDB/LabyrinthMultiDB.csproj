@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0F7A5B9-3793-4CCF-844E-280E90D73755}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabyrinthMultiDB</RootNamespace>
+    <AssemblyName>LabyrinthMultiDB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.CassandraLinq\LabyrinthMultiDB.Client.CassandraLinq.csproj">
+      <Project>{74418692-0952-42cf-ab90-81a9a8dbeab2}</Project>
+      <Name>LabyrinthMultiDB.Client.CassandraLinq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.Cassandra\LabyrinthMultiDB.Client.Cassandra.csproj">
+      <Project>{c6edbd9f-da31-449e-bc95-8189653db3d7}</Project>
+      <Name>LabyrinthMultiDB.Client.Cassandra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.MySQL\LabyrinthMultiDB.Client.MySQL.csproj">
+      <Project>{9735a35c-e175-4ca3-98aa-063e4505aac8}</Project>
+      <Name>LabyrinthMultiDB.Client.MySQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.Oracle\LabyrinthMultiDB.Client.Oracle.csproj">
+      <Project>{1c62fec4-65dd-482b-9987-7ca007f69c46}</Project>
+      <Name>LabyrinthMultiDB.Client.Oracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.RAM\LabyrinthMultiDB.Client.RAM.csproj">
+      <Project>{676ed636-023d-4def-b81a-60b73ee41555}</Project>
+      <Name>LabyrinthMultiDB.Client.RAM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Client.SQLServer\LabyrinthMultiDB.Client.SQLServer.csproj">
+      <Project>{6ed6ba72-b858-4b15-a54f-cdd1efd7e6ce}</Project>
+      <Name>LabyrinthMultiDB.Client.SQLServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabyrinthMultiDB.Engine\LabyrinthMultiDB.Engine.csproj">
+      <Project>{b986fe51-3041-4bd5-83f5-ca8a95e59c4c}</Project>
+      <Name>LabyrinthMultiDB.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
