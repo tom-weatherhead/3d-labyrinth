@@ -3,6 +3,7 @@
 # The labyrinthine abbey library in Python - October 3, 2013
 
 import random
+import sys
 
 class RoomInfo:
 	def __init__(self, level, room):
@@ -512,8 +513,20 @@ class LabyrinthGenerator:
 				print(s)
 
 			#print "This is 'foo'."
-			#inputStr = raw_input("Your move (or (h)elp or (q)uit): ") # Python 2
-			inputStr = input("Your move (or (h)elp or (q)uit): ") # Python 2's raw_input() is called "input()" in Python 3
+			# See https://stackoverflow.com/questions/1093322/how-do-i-check-what-version-of-python-is-running-my-script
+			# assert sys.version_info >= (2,5)
+			# print(sys.version_info)
+			# print(sys.version_info[0])
+			# print(sys.version_info.major)
+			
+			if (sys.version_info.major == 3):
+				print("Python 3")
+				inputStr = input("Your move (or (h)elp or (q)uit): ") # Python 2's raw_input() is called "input()" in Python 3
+			elif (sys.version_info.major == 2):
+				print("Python 2")
+				inputStr = raw_input("Your move (or (h)elp or (q)uit): ") # Python 2
+			else:
+				raise Exception('LabyrinthGenerator.NavigateLabyrinth(): Invalid version of Python: ' + str(sys.version_info))
 
 			if (inputStr == ""):
 				print("The input is empty.")

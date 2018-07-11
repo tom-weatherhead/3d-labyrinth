@@ -1,0 +1,74 @@
+/* /var/www/php/labyrinth/Style.css - Cascading Style Sheet - October 3, 2013 */
+/* Adapted from: Javascript/SharedCSS/Style.css - Cascading Style Sheet - February 22, 2011 */
+
+.standardBody
+{
+    font-family: "Times New Roman",Serif;
+    font-size: medium;
+    margin: 0;                              /* Necessary to eliminate the margin around the outer edges of the page. */
+}
+
+#topContent
+{
+    text-align: center;
+    background-color: #600;                 /* Why are there only three hex digits instead of six?  This might be the same as #660000 */
+    /* background-color: black; */
+    color: white;
+    font-size: x-large;
+    /* text-decoration: none;   I believe that this suppresses the underline under links. */
+    font-weight: bold;
+    padding: 10px;
+    height: 35px;
+}
+
+.box
+{
+    text-align: left;
+    margin: 1px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/*
+.tightBox
+{
+    border: 1px solid black;
+    padding: 0;
+}
+*/
+
+.centreText
+{
+    text-align: center;
+}
+
+/*
+.centreUsingMargins
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+#mainContent table
+{
+    border: 1px solid black;
+    margin-left: auto;      /* This line and the next are from http://www.granneman.com/webdev/coding/css/centertables/ ; they centre the table. */
+    margin-right: auto;
+}
+
+#mainContent th, #mainContent td
+{
+    border: 1px solid black;
+}
+
+/*
+#validIcons img
+{
+    width: 88px;
+    height: 31px;
+    border: 0;
+}
+*/
+
+/* **** End of File **** */

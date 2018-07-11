@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Tom Weatherhead" />
+		<meta name="description" content="The labyrinthine library generator" />
+
+		<title>Labyrinth Generator</title>
+
+		<link rel="icon" type="image/png" href="favicon3.png" />
+
+		<link rel="stylesheet" type="text/css" href="Style.css" />
+	</head>
+	<body class="standardBody">
+		<div id="topContent">Labyrinth Generator</div>
+
+		<div id="mainContent" class="box centreText">
+			<p>A new labyrinth has been generated and inserted.</p>
+			<p>Connections</p>
+			[% connectionsHTMLTable %]
+			<p>Books</p>
+			[% booksHTMLTable %]
+			<p><a href="index.cgi">Navigate</a></p>
+		</div>
+	</body>
+</html>
