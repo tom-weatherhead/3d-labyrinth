@@ -3,7 +3,8 @@
 # The labyrinthine abbey library in Python - October 3, 2013
 
 import random
-import sys
+#import sys
+import VersionSpecificUtilities
 
 class RoomInfo:
 	def __init__(self, level, room):
@@ -518,15 +519,19 @@ class LabyrinthGenerator:
 			# print(sys.version_info)
 			# print(sys.version_info[0])
 			# print(sys.version_info.major)
+
+			# VersionSpecificUtilities.test()
 			
-			if (sys.version_info.major == 3):
-				print("Python 3")
-				inputStr = input("Your move (or (h)elp or (q)uit): ") # Python 2's raw_input() is called "input()" in Python 3
-			elif (sys.version_info.major == 2):
-				print("Python 2")
-				inputStr = raw_input("Your move (or (h)elp or (q)uit): ") # Python 2
-			else:
-				raise Exception('LabyrinthGenerator.NavigateLabyrinth(): Invalid version of Python: ' + str(sys.version_info))
+			# if (sys.version_info.major == 3):
+				# print("Python 3")
+				# inputStr = input("Your move (or (h)elp or (q)uit): ") # Python 2's raw_input() is called "input()" in Python 3
+			# elif (sys.version_info.major == 2):
+				# print("Python 2")
+				# inputStr = raw_input("Your move (or (h)elp or (q)uit): ") # Python 2
+			# else:
+				# raise Exception('LabyrinthGenerator.NavigateLabyrinth(): Invalid version of Python: ' + str(sys.version_info))
+
+			inputStr = VersionSpecificUtilities.input('Your move (or (h)elp or (q)uit): ')
 
 			if (inputStr == ""):
 				print("The input is empty.")
